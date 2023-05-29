@@ -8,13 +8,9 @@ class OfficeBGExe(Enum):
     MS_OFFICE = 'MS_OFFICE'
 
 settings = None
-try :
-  with open("settings.json", 'r') as f:
-    settings = json.load(f)
-except Exception as e:
-  print(f"An error occured on loading settings : {e}")
+with open("settings.json", 'r') as f:
+  settings = json.load(f)
 
-print(f"settings : {settings}")
 
 if(settings != None) :
   if(settings["officeBGExe"] == OfficeBGExe.LIBRE_OFFICE.value ) :
