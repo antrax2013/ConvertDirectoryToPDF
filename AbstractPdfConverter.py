@@ -27,7 +27,7 @@ class AbstractPdfConverter(ABC):
       for element in os.listdir(input_folder) :
         path = input_folder+"/"+element
 
-        if os.path.isdir(path):
+        if os.path.isdir(path) and recursively :
           sub_output_folder = output_folder+"/"+element
           self.convert_files_to_pdf(path, sub_output_folder, recursively)
         
