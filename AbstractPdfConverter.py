@@ -27,12 +27,17 @@ class AbstractPdfConverter(ABC):
       for element in os.listdir(input_folder) :
         path = input_folder+"/"+element
 
-        if os.path.isdir(path) and recursively :
-          sub_output_folder = output_folder+"/"+element
-          self.convert_files_to_pdf(path, sub_output_folder, recursively)
-        
+        if os.path.isdir(path) :
+          if recursively :
+            sub_output_folder = output_folder+"/"+element
+            self.convert_files_to_pdf(path, sub_output_folder, recursively)
+
         elif os.path.isfile(path):
-          self.convert_to_pdf(path, output_folder)
+          try:
+            self.convert_to_pdf(path, output_folder)
+            print(f"{path} conversion completed")
+          except Exception as e:
+            print(f"An error occured during conversion of {path} : {e}")
         
         else : 
            print(f"{path} is unknown")
