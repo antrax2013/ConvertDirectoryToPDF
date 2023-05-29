@@ -18,7 +18,7 @@ class TestLibreOfficeConverter(unittest.TestCase):
         return super().tearDown()
 
     def test_constructor_libreOfficeExe_FileNotFoundError(self):
-        with self.assertRaises(FileNotFoundError): LibreOfficeConverter("")
+        with self.assertRaises(ModuleNotFoundError): LibreOfficeConverter("")
 
     #Region test_convert_to_pdf
     def test_convert_to_pdf_returns_correct_result(self):
@@ -46,13 +46,13 @@ class TestLibreOfficeConverter(unittest.TestCase):
         converter = LibreOfficeConverter()
         converter.convert_files_to_pdf("sources_folder","results_folder", True)        
         files = os.listdir("results_folder")
-        self.assertEqual(6, len(files))
+        self.assertEqual(8, len(files))
 
     def test_convert_files_to_pdf_returns_no_recurusive(self):
         converter = LibreOfficeConverter()
         converter.convert_files_to_pdf("sources_folder","results_folder", False)        
         files = os.listdir("results_folder")
-        self.assertEqual(5, len(files))
+        self.assertEqual(7, len(files))
        
     #EndRegion convert_files_to_pdf
 

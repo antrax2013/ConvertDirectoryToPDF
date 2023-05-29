@@ -1,5 +1,4 @@
-from subprocess import  Popen
-import os
+from subprocess import Popen
 from os.path import exists
 from AbstractPdfConverter import *
 
@@ -9,10 +8,11 @@ from AbstractPdfConverter import *
 class LibreOfficeConverter(AbstractPdfConverter)  :   
 
   def __init__(self, libre_office_path = r"C:\Program Files\LibreOffice\program\soffice.exe"):
+    AbstractPdfConverter.__init__(self)
     self.libre_office_path = libre_office_path
 
     if(not exists(self.libre_office_path)) :
-        raise FileNotFoundError(f"LibreOffice not found : {self.libre_office_path}")
+        raise ModuleNotFoundError(f"LibreOffice not found : {self.libre_office_path}")
 
   ##
   ## Function to convert file to pdf
