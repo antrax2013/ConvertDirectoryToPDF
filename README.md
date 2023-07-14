@@ -10,3 +10,8 @@ ConvertDirectoryToPDF est un outil qui permet de convertir des fichiers "office"
 1. `libreOfficePath` : est l'emplacement de l'exécutable de libre office. S'il est installé sur votre machine, il est probable que celui que j'ai pré-défini soit le bon.
 1. `inputPath` : est le chemin du répertoire contenant les fichiers que vous voulez convertir
 1. `outputPath` : est le chemin du répertoire où vous voulez que les fichiers convertis soient créés
+
+# Evolutions à venir
+
+1. Gérer les accents dans le nom des paths
+1. Pouvoir inclure/exclure : des fichiers, des répertoires et des extensions

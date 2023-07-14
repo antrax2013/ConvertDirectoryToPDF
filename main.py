@@ -11,7 +11,6 @@ settings = None
 with open("settings.json", 'r') as f:
   settings = json.load(f)
 
-
 if(settings != None) :
   if(settings["officeBGExe"] == OfficeBGExe.LIBRE_OFFICE.value ) :
     converter = LibreOfficeConverter(settings["libreOfficePath"])

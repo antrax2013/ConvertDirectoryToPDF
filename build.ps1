@@ -1,1 +1,1 @@
-pyinstaller --clean -n ConvertDirectoryToPDF -w 'main.py' --onefile; Copy-Item "settings.json" -Destination "./dist"; 
+pyinstaller --clean -c -n ConvertDirectoryToPDF -w 'main.py' --onefile; Copy-Item "settings.json" -Destination "./dist"; 
