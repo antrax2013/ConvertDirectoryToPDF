@@ -6,10 +6,11 @@ ConvertDirectoryToPDF est un outil qui permet de convertir des fichiers "office"
 
 1. Ouvrez le fichier settings.json à la racine du répertoire.
 1. Modifier les clés suivantes:
-1. `officeBGExe` : définit le moteur. Les valeurs attendues sont soit `LIBRE_OFFICE` soit `MS_OFFICE`
-1. `libreOfficePath` : est l'emplacement de l'exécutable de libre office.
-1. `inputPath` : est le chemin du répertoire contenant les fichiers que vous voulez convertir
-1. `outputPath` : est le chemin du répertoire où vous voulez que les fichiers convertis soient créés
+
+- `officeBGExe` : définit le moteur. Les valeurs attendues sont soit `LIBRE_OFFICE` soit `MS_OFFICE`
+- `libreOfficePath` : est l'emplacement de l'exécutable de libre office.
+- `inputPath` : est le chemin du répertoire contenant les fichiers que vous voulez convertir
+- `outputPath` : est le chemin du répertoire où vous voulez que les fichiers convertis soient créés
 
 ### exemple
 
@@ -32,14 +33,22 @@ ConvertDirectoryToPDF est un outil qui permet de convertir des fichiers "office"
 ## Env
 
 Activer/Désactiver l'environement virtuel :
-"env/Scripts/activate.bat"
-"deactivate.bat"
+
+```PowerShell
+"./env/Scripts/activate"
+deactivate
+```
 
 ## Run Tests
 
+```Powershell
 python -m unittest /tests
+```
 
 ## Dependance
 
+```Powershell
 pip install nose
 pip install docx2pdf
+pip install comtypes
+```
