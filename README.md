@@ -16,10 +16,10 @@ ConvertDirectoryToPDF est un outil qui permet de convertir des fichiers "office"
 
 ```JSON
 {
-"officeBGExe":"LIBRE_OFFICE",
-"libreOfficePath":"Include\\LibreOffice\\program\\soffice.exe",
-"inputPath":"C:\\Workspace\\Python\\ConvertDirectoryToPDF\\tests\\sources_folder",
-"outputPath":"C:\\temp"
+  "officeBGExe":"LIBRE_OFFICE",
+  "libreOfficePath":"Include\\LibreOffice\\program\\soffice.exe",
+  "inputPath":"C:\\Workspace\\Python\\ConvertDirectoryToPDF\\tests\\sources_folder",
+  "outputPath":"C:\\temp"
 }
 ```
 
@@ -27,25 +27,25 @@ ConvertDirectoryToPDF est un outil qui permet de convertir des fichiers "office"
 
 1. Gérer les accents dans le nom des paths
 1. Pouvoir inclure/exclure : des fichiers, des répertoires et des extensions
+1. Passer par une API pour ce passer de la dépendance avec les exe
 
 # Pense bête
 
 ## Env
 
 Activer/Désactiver l'environement virtuel :
-
 ```PowerShell
 "./env/Scripts/activate"
 deactivate
 ```
 
-## Run Tests
+## Executer les Tests
 
 ```Powershell
 python -m unittest /tests
 ```
 
-## Dependance
+## Dépendances
 
 ```Powershell
 pip install nose
