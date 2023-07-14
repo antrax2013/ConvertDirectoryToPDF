@@ -2,7 +2,6 @@ from subprocess import Popen
 from os.path import exists
 from AbstractPdfConverter import *
 
-
 ##
 ## Class to convert file to pdf based on Libre office
 class LibreOfficeConverter(AbstractPdfConverter)  :   

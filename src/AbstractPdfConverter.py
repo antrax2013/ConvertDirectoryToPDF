@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import os
 from os.path import exists
+import logging
 
 ##
 ## Class to convert file to pdf based on Libre office
@@ -35,10 +36,10 @@ class AbstractPdfConverter(ABC):
         elif os.path.isfile(path):
           try:
             self.convert_to_pdf(path, output_folder)
-            print(f"{path} conversion completed")
+            logging.info(f"{path} conversion completed to {output_folder}")
           except Exception as e:
-            print(f"An error occured during conversion of {path} : {e}")
+            logging.error(f"An error occured during conversion of {path} : {e}")
         
         else : 
-           print(f"{path} is unknown")
+          logging.warn(f"{path} is unknown")
     #endOf convert_files_to_pdf

@@ -1,6 +1,6 @@
 from os.path import exists
 from docx2pdf import convert #pip install docx2pdf
-from comtypes import client
+from comtypes import client #pip install comtypes
 import winreg
 
 #https://github.com/robsonlimadeveloper/msoffice2pdf/blob/develop/src/msoffice2pdf/__init__.py
