@@ -34,7 +34,6 @@ ConvertDirectoryToPDF est un outil qui permet de convertir des fichiers "office"
 ## Env
 
 Activer/Désactiver l'environement virtuel :
-
 ```PowerShell
 "./env/Scripts/activate"
 deactivate
